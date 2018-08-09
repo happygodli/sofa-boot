@@ -223,7 +223,7 @@ public class JvmServiceConsumer implements ClientFactoryAware {
 </dependency>
 ```
 
-为了演示在展示层引用 JVM 服务，我们在演示工程增加了一个 Rest 接口，在 Rest 接口中将引用上文 SOFABoot 模块发布的 JVM 服务。SOFABoot 模块一般用于封装对外发布服务接口的具体实现，属于业务层，Controller 属于展现层内容，我们建议将 Controller 定义放在 Root Application Context 中，然后通过 @SofaReference 引用 SOFABoot 模块发布的服务：
+SOFABoot 模块一般用于封装对外发布服务接口的具体实现，属于业务层，Controller 属于展示层内容，我们建议将 Controller 定义放在 Root Application Context 中，然后通过 @SofaReference 引用 SOFABoot 模块发布的服务，为了演示在展示层引用 JVM 服务，我们在演示工程增加了一个 Rest 接口，在 Rest 接口中将引用上文 SOFABoot 模块发布的 JVM 服务：
 
 ```java
 @RestController
